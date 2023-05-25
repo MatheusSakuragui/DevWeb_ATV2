@@ -1,0 +1,267 @@
+{
+  "info": {
+    "_postman_id": "YOUR_COLLECTION_ID",
+    "name": "API Collection",
+    "description": "Collection of API routes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Time",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/team",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "team"
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Nome do Time\"\n}"
+        },
+        "description": "Criar um novo time"
+      },
+      "response": []
+    },
+    {
+      "name": "Obter Times",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/team/teams",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "team",
+            "teams"
+          ]
+        },
+        "method": "GET",
+        "description": "Obter todos os times"
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Time",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/team/team",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "team",
+            "team"
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"name\": \"Novo Nome do Time\"\n}"
+        },
+        "description": "Atualizar um time existente"
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar Time",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/team/team",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "team",
+            "team"
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1\n}"
+        },
+        "description": "Deletar um time"
+      },
+      "response": []
+    },
+    {
+      "name": "Obter Time por Nome",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/team/team/NomeDoTime",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "team",
+            "team",
+            "NomeDoTime"
+          ]
+        },
+        "method": "GET",
+        "description": "Obter um time pelo nome"
+      },
+      "response": []
+    },
+    {
+      "name": "Criar Partida",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/match",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "match"
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"idCasa\": 1,\n  \"idVisitante\": 2\n}"
+        },
+        "description": "Criar uma nova partida"
+      },
+      "response": []
+    },
+    {
+      "name": "Obter Partidas",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/match",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "match"
+          ]
+        },
+        "method": "GET",
+        "description": "Obter todas as partidas"
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Partida",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/match/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "match",
+            "1"
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"idHost\": 1,\n  \"idVisitor\": 2,\n  \"date\": \"2023-05-24\"\n}"
+        },
+        "description": "Atualizar uma partida existente"
+      },
+      "response": []
+    },
+    {
+      "name": "Obter Partida por ID do Time",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/match/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "match",
+            "1"
+          ]
+        },
+        "method": "GET",
+        "description": "Obter uma partida pelo ID do time"
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar Partida",
+      "request": {
+        "url": {
+          "raw": "http://localhost:3000/match",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "match"
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1\n}"
+        },
+        "description": "Deletar uma partida"
+      },
+      "response": []
+    }
+  ]
+}
